@@ -7,6 +7,8 @@ $meses = array(
 	'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
 );
 
+$alejandro = array('nombre' => 'Alejandro', 'telefono' => 555666777, 'edad' => 30, 'pais' => 'España');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,14 +19,19 @@ $meses = array(
 </head>
 
 <body>
-    <h1>Meses del año</h1>
+    <!-- <h1>Meses del año</h1> -->
+    <h1>Datos personales de <?php echo $alejandro['nombre'] ?></h1>
     <ul>
         <?php 
 			# Mediante el bucle 'foreach' podemos recorrer un array() y mostrar su contenido,
 			# y además presentarlo en forma de lista concatenandolo con las etiquetas <li></li>
 
-			foreach($meses as $mes) {
-				echo '<li>' . $mes . '</li>';
+		// 	foreach($meses as $mes) {
+		// 		echo '<li>' . $mes . '</li>';
+		// }
+
+		foreach($alejandro as $dato => $valor) {
+				echo '<li>' . $dato . ': ' . $valor . '</li>';
 		}
 
 		?>
